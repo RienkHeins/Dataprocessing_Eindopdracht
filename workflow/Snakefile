@@ -1,0 +1,16 @@
+"""
+Main snakefile that runs the pipeline. Run with command snakemake --snakefile Snakefile -c n,
+with n being the amount of cores
+"""
+
+configfile: "config/config.yaml"
+
+SAMPLES = config["samples"]
+
+rule all:
+    input:
+        #"results/PCA.png",
+        #"dag.png"
+        expand("Trimmed/trimmed_{sample}.fastq.gz", sample=SAMPLES)
+
+include: "Rules/Trimmomatic.smk"

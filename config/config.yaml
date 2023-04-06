@@ -1,0 +1,20 @@
+datadir: input/
+resultsdir: results/
+
+samples: ['Eco_Ctrl1', 'Eco_Ctrl2', 'Eco_Exp1', 'Eco_Exp2']
+
+threads: 60
+
+trimmomatic:
+  adapter: trimmomatic/RiboSeq_adapter_as.fa
+  jar: trimmomatic/trimmomatic-0.39.jar
+  phred: -phred33
+  minlen: 12
+  maxmismatch: 2
+  pairend: 30
+  minscore: 6
+  slidwindow: 4
+  minqual: 15
+
+
+bowtiemode: --local
