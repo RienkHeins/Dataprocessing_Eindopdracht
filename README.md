@@ -57,3 +57,9 @@ With n being the amount of cores used. The amount of threads used and the locati
 To clean the pipeline use the clean rule with the following command, this will result in an empty pipeline: \
 \
 snakemake clean
+
+## Visualization
+Figures 2 and 3 show the created PCA plot, heatmap and dendrogram.
+
+![Figure 2: PCA plot of the data](results/images/PCA.pdf)
+![Figure 3: Heatmap and dendrogram](results/images/Dendrogram_and_heatmap.pdf)
