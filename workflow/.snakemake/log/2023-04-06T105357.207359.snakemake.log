@@ -1,3 +1,0 @@
-WorkflowError in file /home/Rienk/repositories/Dataprocessing_Eindopdracht/workflow/Snakefile, line 6:
-Workflow defines configfile config/config.yaml but it is not present or accessible (full checked path: /home/Rienk/repositories/Dataprocessing_Eindopdracht/workflow/config/config.yaml).
-  File "/home/Rienk/repositories/Dataprocessing_Eindopdracht/workflow/Snakefile", line 6, in <module>
