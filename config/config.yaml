@@ -1,9 +1,14 @@
 datadir: input/
 resultsdir: results/
+referenceDB: reference/
 
+design: "Design_sheet.txt"
 samples: ['Eco_Ctrl1', 'Eco_Ctrl2', 'Eco_Exp1', 'Eco_Exp2']
+refgenome: "NC_000913.3.fa"
+refgff3: "NC_000913.3.gff3"
+newgff3: "NC_000913.3_CDS.gff3"
 
-threads: 60
+threads: 8
 
 trimmomatic:
   adapter: trimmomatic/RiboSeq_adapter_as.fa

@@ -13,7 +13,7 @@ rule install_packages:
 rule create_images:
     input:
         install_check = "logs/visualizing/install_packages.log",
-        design = DATADIR + "Design_sheet.txt",
+        design = DATADIR + config["design"],
         data = "results/DESeq_Input.txt"
     output:
         "results/images/PCA.pdf",
