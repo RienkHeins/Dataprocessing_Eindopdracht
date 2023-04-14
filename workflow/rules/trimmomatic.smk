@@ -1,15 +1,9 @@
-"""
-Snakemake rule for data trimming with trimmomatic
-"""
-
-DATADIR = config["datadir"]
-
 rule data_trimming:
     input:
         files=DATADIR + "{sample}.fastq.gz",
         annotation = config["trimmomatic"]["adapter"]
     output:
-        "Trimmed/trimmed_{sample}.fastq.gz"
+        "trimmed/trimmed_{sample}.fastq.gz"
     threads: config["threads"]
     params:
         jar=config["trimmomatic"]["jar"],
@@ -20,7 +14,8 @@ rule data_trimming:
         minscore=config["trimmomatic"]["minscore"],
         slidwindow=config["trimmomatic"]["slidwindow"],
         minqual=config["trimmomatic"]["minqual"]
-    message: "Removing low quality reads and adapter sequence with trimmomatic"
+    message:
+        "Removing low quality reads and adapter sequence with trimmomatic"
     log:
         "logs/trimmomatic/{sample}_trimmed.log"
     shell:
