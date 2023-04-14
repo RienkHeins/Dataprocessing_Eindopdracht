@@ -10,14 +10,14 @@ rule build_database:
     params:
         ref= REFDB + "reference"
     shell:
-        "bowtie2-build -f {input} ref > {log}"
+        "bowtie2-build -f {input} {params.ref} > {log} 2>&1"
 
 rule mapping:
     input:
         trimmed_files="trimmed/trimmed_{sample}.fastq.gz",
         database_check="logs/mapping/create_database.log"
     output:
-        "Mapped/{sample}_mapped.sam"
+        "mapped/{sample}.sam"
     threads:
         config["threads"]
     message:
@@ -28,4 +28,4 @@ rule mapping:
         mode = config["bowtiemode"],
         database = REFDB + "reference"
     shell:
-        "bowtie2 -q -U {input.trimmed_files} -x {params.database} -S {output} {params.mode} 2> {log}"
+        "bowtie2 -q -U {input.trimmed_files} -x {params.database} -S {output} {params.mode} > {log} 2>&1"
