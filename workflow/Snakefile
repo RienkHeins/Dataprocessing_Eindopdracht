@@ -5,12 +5,18 @@ with n being the amount of cores
 
 configfile: "config/config.yaml"
 
+DATADIR = config["datadir"]
 SAMPLES = config["samples"]
+RESULTSDIR = config["resultsdir"]
+REFDB = config["referenceDB"]
 
 rule all:
     input:
-        #"results/PCA.png",
-        #"dag.png"
-        expand("Trimmed/trimmed_{sample}.fastq.gz", sample=SAMPLES)
+        "results/images/PCA.pdf",
+        "results/images/Dendrogram_and_heatmap.pdf"
 
-include: "Rules/Trimmomatic.smk"
+include: "rules/trimmomatic.smk"
+include: "rules/mapping.smk"
+include: "rules/decompiling.smk"
+include: "rules/expression.smk"
+include: "rules/visualize.smk"
