@@ -23,4 +23,4 @@ rule data_trimming:
         SE {params.phred} {input.files} {output} \
         ILLUMINACLIP:{input.annotation}:{params.maxmismatch}:{params.pairend}:{params.minscore} \
         SLIDINGWINDOW:{params.slidwindow}:{params.minqual} \
-        MINLEN:{params.minlen} -threads {threads} 2> {log}"
+        MINLEN:{params.minlen} -threads {threads} > {log} 2>&1"
