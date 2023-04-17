@@ -82,3 +82,5 @@ Figures 2 and 3 show the created PCA plot, heatmap and dendrogram.
 
 ![Figure 2: PCA plot of the data](result_example/PCA-1.png)
 ![Figure 3: Heatmap and dendrogram](result_example/Dendrogram_and_heatmap-1.png)
+
+The heatmap shows variance spread within the data with the dendrogram and heatmap showing variance between the samples themself. RNA expression data as used in STATR often has problems with biological variance in the data which alters the expression values. High biological variance can make the expression data unreliable as changes in expression could be through this variance and not because of genetic effects. Because of this the pca, heatmap and dendrogram can be used to determine the quality of the outputted data and to consider if it is usable for further studies.
