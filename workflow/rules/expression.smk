@@ -25,7 +25,7 @@ rule differential_expression:
     log:
         "logs/expression/{sample}.log"
     shell:
-        "bedtools coverage -a {input.gff} -b {input.bed} -s > {output} > {log} 2>&1"
+        "bedtools coverage -a {input.gff} -b {input.bed} -s > {output} 2> {log}"
 
 rule create_DESeq_data:
     input:

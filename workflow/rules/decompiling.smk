@@ -10,7 +10,7 @@ rule decompile_bam:
     message:
         "Started decompiling mapping data, converting SAM files to BAM"
     shell:
-        "samtools view -bS {input} > {output} > {log} 2>&1"
+        "samtools view -bS {input} > {output} 2> {log}"
 
 rule sort:
     input:
@@ -24,7 +24,7 @@ rule sort:
     message:
         "Sorting bam files with samtools"
     shell:
-        "samtools sort -o {output} {input} > {log} 2>&1"
+        "samtools sort -o {output} {input} 2> {log}"
 
 rule bedtools:
     input:
@@ -37,4 +37,4 @@ rule bedtools:
     threads:
         config["threads"]
     shell:
-        "bedtools bamtobed -i {input} > {output} > {log} 2>&1"
+        "bedtools bamtobed -i {input} > {output} 2> {log}"

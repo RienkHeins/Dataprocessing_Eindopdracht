@@ -10,7 +10,7 @@ rule build_database:
     params:
         ref= REFDB + "reference"
     shell:
-        "bowtie2-build -f {input} {params.ref} > {log} 2>&1"
+        "bowtie2-build -f {input} {params.ref} 2> {log}"
 
 rule mapping:
     input:
@@ -28,4 +28,4 @@ rule mapping:
         mode = config["bowtiemode"],
         database = REFDB + "reference"
     shell:
-        "bowtie2 -q -U {input.trimmed_files} -x {params.database} -S {output} {params.mode} > {log} 2>&1"
+        "bowtie2 -q -U {input.trimmed_files} -x {params.database} -S {output} {params.mode} 2> {log}"
