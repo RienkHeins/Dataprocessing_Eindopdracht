@@ -24,19 +24,20 @@ Python 3.11\
 Or visit [documentation](https://www.python.org/downloads/) \
 R 4.0.2 \
 `sudo apt-get install r-base=4.0.2` \
-Or visit [documentation](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html)
+Or visit [documentation](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html) \
 Trimmomatic 0.39 \
 `sudo apt-get install trimmomatic=0.39` \
-Or visit [documentation](https://ubuntu.pkgs.org/20.04/ubuntu-universe-amd64/trimmomatic_0.39+dfsg-1_all.deb.html)
+Or visit [documentation](https://ubuntu.pkgs.org/20.04/ubuntu-universe-amd64/trimmomatic_0.39+dfsg-1_all.deb.html) \
 Bowtie2 2.3.4 \
 `sudo apt-get install Bowtie2=2.3.4` \
-Or visit [documentation](https://www.metagenomics.wiki/tools/bowtie2/install)
+Or visit [documentation](https://www.metagenomics.wiki/tools/bowtie2/install) \
 Samtools 1.15 \
 `sudo apt-get samtools=1.15` \
 Or visit [documentation](https://www.biostars.org/p/328831/) \
 BEDtools 2.27 \
 `sudo apt-get bedtools=2.27` \
 Or visit [documentation](https://bedtools.readthedocs.io/en/latest/content/installation.html)
+\
 
 All files needed are provided in the pipeline as the example versions as provided by the original pipeline. Required files are the input fastq.gz files, a design sheet file matching the input, a reference fasta file, a reference genome annotation file and a riboseq adapter file for the trimmomatic tool. 
 
