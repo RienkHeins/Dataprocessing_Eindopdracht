@@ -1,0 +1,7 @@
+TrimmomaticSE: Started with arguments:
+ -phred33 input/Eco_Ctrl2.fastq.gz trimmed/trimmed_Eco_Ctrl2.fastq.gz ILLUMINACLIP:trimmomatic/RiboSeq_adapter_as.fa:2:30:6 SLIDINGWINDOW:4:15 MINLEN:12 -threads 4
+Using Long Clipping Sequence: 'AAGATCGGAAGAGCACACGTCTGAACTCCAGTCACGCCAATATCTCGTAT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCACNNNNNNATCTCGTATGCCGTCTTCTGCTTG'
+ILLUMINACLIP: Using 0 prefix pairs, 2 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Reads: 750000 Surviving: 723621 (96.48%) Dropped: 26379 (3.52%)
+TrimmomaticSE: Completed successfully
